@@ -31,7 +31,6 @@ body {
 }
 
 .navbar {
-  position: fixed;                 /* locks navbar to viewport (stays on screen when scrolling) */
   top: 0;                          /* anchors navbar to top of screen */
   left: 0;                         /* anchors navbar to left edge of screen */
   width: 100%;                     /* sets sidebar width */
