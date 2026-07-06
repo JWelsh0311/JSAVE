@@ -30,23 +30,20 @@ body {
   padding: 0 20px; 
 }
 
-.sidebar {
-  position: fixed;                 /* locks sidebar to viewport (stays on screen when scrolling) */
-  top: 0;                          /* anchors sidebar to top of screen */
-  left: 0;                         /* anchors sidebar to left edge of screen */
-  height: 100vh;                   /* makes sidebar full screen height */
-  width: 75px;                   /* sets sidebar width */
-  background: rgba(15, 31, 20, 0.95); /* navbar background color */
-  border-right: none;              /* no right border line */
+.navbar {
+  position: fixed;                 /* locks navbar to viewport (stays on screen when scrolling) */
+  top: 0;                          /* anchors navbar to top of screen */
+  left: 0;                         /* anchors navbar to left edge of screen */
+  width: 100%;                     /* sets sidebar width */
+  background: none;                /* no background color */
   padding: 20px 10px;              /* inner spacing (top/bottom + left/right) */
   display: flex;                   /* enables flexbox layout */
-  flex-direction: column;          /* stacks items vertically */
   gap: 10px;                       /* space between nav items */
-  z-index: 1000;                  /* keeps sidebar above background/content */
+  z-index: 1000;                   /* keeps navbar above background/content */
 }
 
-.sidebar a {
-  color: #edf8ff;            /* link text color */
+.navbar a {
+  color: #fff;            /* link text color */
   text-decoration: none;     /* removes underline from links */
   padding: 10px;             /* clickable area around link text */
   border-radius: 6px;        /* rounded corners for hover effect */
@@ -54,11 +51,17 @@ body {
   transition: 0.2s;          /* smooth hover animation */
 }
 
-.sidebar a:hover {
+.navbar .pipe {
+  color: white;
+  font-size: 25px;
+  user-select: none;
+}
+
+.navbar a:hover {
   background: #2f5a3d;       /* hover highlight background color */
 }
 
-.sidebar a:active {
+.navbar a:active {
   background: lightcoral;
   border-left: 5px solid #edf8ff;
 }
@@ -105,12 +108,12 @@ body {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-     .sidebar {
+     .navbar {
     width: 60px;                  /* slightly narrower sidebar */
     padding: 15px 8px;            /* reduce padding */
   }
 
-  .sidebar a {
+  .navbar a {
     font-size: 14px;              /* smaller link text */
     padding: 8px;                 /* smaller clickable area */
   }
@@ -128,12 +131,12 @@ body {
 
 @media (max-width: 480px) {
 
-  .sidebar {
+  .navbar {
     width: 55px;              /* narrow sidebar for phones */
     padding: 10px 5px;        /* reduce sidebar padding */
   }
 
-  .sidebar a {
+  .navbar a {
     font-size: 12px;          /* smaller navigation text */
     padding: 6px;             /* smaller clickable area */
   }
