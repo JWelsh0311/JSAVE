@@ -10,43 +10,42 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-main {
-  flex: 1; /* fills space between navbar and footer */
-  display: flex;
-  flex-direction: column;
-}
-
 .hero {
   height: 100vh;              /* makes container full screen height */
   display: flex;              /* enables flex layout */
+  flex-direction: column;     /* stack items vertically */ 
   justify-content: center;    /* centers vertically */
   align-items: center;        /* centers horizontally */
   text-align: center;         /* centers text inside elements */
   color: #edf8ff;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.content {
-  height: auto;
-  transform: none;
-  display: flex;              /* enables flex layout */
-  flex-direction: column;     /* stacks items vertically */
-  justify-content: center;    /* centers vertically */
-  align-items: center;        /* centers horizontally */
-  text-align: center;         /* centers text inside elements */
-  color: #edf8ff;
-  padding-top: 20px; 
+.about-content {
+  flex: 1;                        /* pushes footer to bottom */
+  display: flex;                  /* enables flexbox layout */
+  flex-direction: column;         /* stacks the paragraphs vertically */
+  justify-content: flex-start;    /* starts content from the top of the section */
+  align-items: center;            /* centers content horizontally */
+  text-align: center;             /* centers text inside the paragraphs */
+  padding-top: 400px;             /* creates space above content to position it lower on the page */
+  box-sizing: border-box;         /* includes padding in the total height calculation */
+}
+  
+.about-content h2 {
+  max-width: 1200px;              /* limits paragraph width so text does not stretch too far across the screen */
+  margin: 5px auto;              /* adds vertical spacing between paragraphs and centers the block */
+  line-height: 1.2;               /* increases line spacing to improve readability */
 }
 
 .navbar {
-  position: fixed;
+  position: static;
   top: 0;                          /* anchors navbar to top of screen */
   left: 0;                         /* anchors navbar to left edge of screen */
   width: 100%;                     /* sets sidebar width */
   background: none;                /* no background color */
-  padding: 10px 0px;              /* inner spacing (top/bottom + left/right) */
+  padding: 5px 0px;               /* inner spacing (top/bottom + left/right) */
   display: flex;                   /* enables flexbox layout */
   gap: 10px;                       /* space between nav items */
   z-index: 1000;                   /* keeps navbar above background/content */
@@ -80,14 +79,19 @@ main {
   width: 100%;
   text-align: center;
   padding: 0px;
-  margin-top: 10px;
+}
+
+.portfolio-main {
+  flex: 1;                    /* pushes footer to bottom */
+  display: flex;              /* enables flexbox */
+  flex-direction: column;     /* stacks content vertically */
 }
 
 .project-grid {
   display: grid;                          /* enables grid layout */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive columns */
   gap: 20px;                              /* space between cards */
-  padding: 450px 0px 0px;                   /* spacing around grid */
+  padding: 410px 0px 0px;                   /* spacing around grid */
   max-width: 1100px;                      /* keeps layout centered and clean */
   margin: 0 auto;
 }
@@ -116,7 +120,7 @@ main {
 /* Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
+    position: static;
 	gap: 18px;                 /* less space between links */
     height: 55px;              /* slightly shorter navbar */
   }
@@ -129,6 +133,10 @@ main {
   .navbar .pipe {
     font-size: 22px;
   }
+  
+  .about-content {
+  padding-top: 200px;
+  }
 
   .hero h1 {
     font-size: 2rem;
@@ -137,7 +145,7 @@ main {
 
 @media (max-width: 480px) {
    .navbar {
-	position: fixed;
+	position: static;
     gap: 10px;
     height: 50px;
   }
@@ -150,14 +158,19 @@ main {
   .navbar .pipe {
     font-size: 18px;
   }
-
-  .hero h1 {
-    font-size: 1.5rem;
-    padding: 0 15px;
+  
+   .hero h1 {
+    font-size: 1.3rem;
+    padding: 0 20px;
+  }
+  
+  .about-content {
+  padding-top: 200px;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
     padding: 200px 15px 20px;      /* top right/left bottom */
   }
+  
 }
