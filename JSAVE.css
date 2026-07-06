@@ -107,51 +107,48 @@ body {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-     .navbar {
-    width: 60px;                  /* slightly narrower sidebar */
-    padding: 15px 8px;            /* reduce padding */
+      .navbar {
+    gap: 18px;                 /* less space between links */
+    height: 55px;              /* slightly shorter navbar */
   }
 
   .navbar a {
-    font-size: 14px;              /* smaller link text */
-    padding: 8px;                 /* smaller clickable area */
+    font-size: 15px;           /* smaller text */
+    padding: 8px 12px;
+  }
+
+  .navbar .pipe {
+    font-size: 22px;
   }
 
   .hero h1 {
-    font-size: 2rem;              /* smaller homepage quote */
-    padding: 0 20px;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr); /* keep two cards per row */
-    gap: 15px;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
 
-  .navbar {
-    width: 55px;              /* narrow sidebar for phones */
-    padding: 10px 5px;        /* reduce sidebar padding */
+   .navbar {
+    gap: 10px;
+    height: 50px;
   }
 
   .navbar a {
-    font-size: 12px;          /* smaller navigation text */
-    padding: 6px;             /* smaller clickable area */
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .navbar .pipe {
+    font-size: 18px;
   }
 
   .hero h1 {
-    font-size: 1.5rem;        /* smaller homepage quote */
+    font-size: 1.5rem;
     padding: 0 15px;
   }
 
   .project-grid {
-    grid-template-columns: 1fr; /* stack cards vertically */
-    gap: 15px;
+    grid-template-columns: 1fr;
     padding: 15px;
-  }
-
-  .project-card {
-    max-width: 100%;          /* allow cards to fill width */
   }
 }
