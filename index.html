@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JSAVE Web Development</title>
+<meta charset="UTF-8">
+    <meta name="description" content="Front-end web development focusing on HTML, CSS, and JavaScript supporting your professional online presence.">
+    <meta name="keywords" content="web development, front-end developer, HTML, CSS, JavaScript, responsive web design, small business websites, portfolio website, custom website, website design, JSAVE Web Development">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="John Welsh">
+	<link rel="stylesheet" type="text/css" href="JSAVE.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="sidebar">
+  <a href="index.html" class="active">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="about.html">About</a>
+</nav>
+
+<!-- all content goes inside -->
+<div class="hero">
+  <h1 id="quote"></h1>
+</div>
+<!-- end content -->
+
+<footer class="site-footer">
+  © 2026 JSAVE Web Development
+</footer>
+
+<script>
+  const quotes = [
+    "Front-End Design For A Professional Presence",
+    "Basic Build Out Using HTML, CSS, and JavaScript",
+    "Responsive Builds For Multiple Devices"
+  ];
+
+  let index = 0;
+  const quoteElement = document.getElementById("quote");
+
+  function showQuote() {
+    quoteElement.innerText = quotes[index];
+    index = (index + 1) % quotes.length; // loop back to start
+  }
+
+  // Show first quote immediately
+  showQuote();
+
+  // Change quote every 5 seconds
+  setInterval(showQuote, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: url("background.png") no-repeat;
+	background-size: cover;
+	background-position: center 10%;
+	color: #edf8ff;
+	font-family: Arial, sans-serif;
+}
+
+.hero {
+  height: 100vh;              /* makes container full screen height */
+  display: flex;              /* enables flex layout */
+  justify-content: center;    /* centers vertically */
+  align-items: center;        /* centers horizontally */
+  text-align: center;         /* centers text inside elements */
+  color: #edf8ff;
+  padding: 0px;
+}
+
+.content {
+  height: 100vh;              /* makes container full screen height */
+  transform: translateY(20px); /* moves content further down the viewport */
+  display: flex;              /* enables flex layout */
+  flex-direction: column;     /* stacks items vertically */
+  justify-content: center;    /* centers vertically */
+  align-items: center;        /* centers horizontally */
+  text-align: center;         /* centers text inside elements */
+  color: #edf8ff;
+  padding: 0 20px; 
+}
+
+.sidebar {
+  position: fixed;                 /* locks sidebar to viewport (stays on screen when scrolling) */
+  top: 0;                          /* anchors sidebar to top of screen */
+  left: 0;                         /* anchors sidebar to left edge of screen */
+  height: 100vh;                   /* makes sidebar full screen height */
+  width: 75px;                   /* sets sidebar width */
+  background: rgba(15, 31, 20, 0.95); /* navbar background color */
+  border-right: none;              /* no right border line */
+  padding: 20px 10px;              /* inner spacing (top/bottom + left/right) */
+  display: flex;                   /* enables flexbox layout */
+  flex-direction: column;          /* stacks items vertically */
+  gap: 10px;                       /* space between nav items */
+  z-index: 1000;                  /* keeps sidebar above background/content */
+}
+
+.sidebar a {
+  color: #edf8ff;            /* link text color */
+  text-decoration: none;     /* removes underline from links */
+  padding: 10px;             /* clickable area around link text */
+  border-radius: 6px;        /* rounded corners for hover effect */
+  text-align: center;        /* centers link text */
+  transition: 0.2s;          /* smooth hover animation */
+}
+
+.sidebar a:hover {
+  background: #2f5a3d;       /* hover highlight background color */
+}
+
+.sidebar a:active {
+  background: lightcoral;
+  border-left: 5px solid #edf8ff;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.project-grid {
+  transform: translateY(400px); /* moves content further down the viewport */
+  display: grid;                          /* enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive columns */
+  gap: 20px;                              /* space between cards */
+  padding: 20px;                          /* spacing around grid */
+  max-width: 1100px;                      /* keeps layout centered and clean */
+  margin: 0 auto;                         /* centers the grid */
+}
+
+.project-card {
+  background: rgba(15, 31, 20, 0.7);
+  border: 5px solid #2f5a3d;
+  border-radius: 6px;                  /* rounded corners */
+  padding: 20px;                       /* inner padding */
+  max-width: 350px;                    /* width of each card */
+  text-align: center;
+}
+
+.project-card a {
+  color: #edf8ff;                        /* text color insode cards */
+  text-decoration: none;                 /* removes underline */
+  padding: 10px;                         /* clickable area around link */
+  border-radius: 6px;                    /* rounded corners for hover effect */
+  text-align: center;                    /* centers link text */
+}
+
+.project-card a:hover {
+  background: #2f5a3d; /* hover highlight */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+     .sidebar {
+    width: 60px;                  /* slightly narrower sidebar */
+    padding: 15px 8px;            /* reduce padding */
+  }
+
+  .sidebar a {
+    font-size: 14px;              /* smaller link text */
+    padding: 8px;                 /* smaller clickable area */
+  }
+
+  .hero h1 {
+    font-size: 2rem;              /* smaller homepage quote */
+    padding: 0 20px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* keep two cards per row */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .sidebar {
+    width: 55px;              /* narrow sidebar for phones */
+    padding: 10px 5px;        /* reduce sidebar padding */
+  }
+
+  .sidebar a {
+    font-size: 12px;          /* smaller navigation text */
+    padding: 6px;             /* smaller clickable area */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;        /* smaller homepage quote */
+    padding: 0 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .project-card {
+    max-width: 100%;          /* allow cards to fill width */
+  }
+}
