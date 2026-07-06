@@ -1,11 +1,19 @@
-body {
-	margin: 0;
-	min-height: 100vh;
-	background: url("background.png") no-repeat;
-	background-size: cover;
-	background-position: center top;
-	color: #edf8ff;
-	font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: url("background.png") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: #edf8ff;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  flex: 1; /* fills space between navbar and footer */
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -15,27 +23,30 @@ body {
   align-items: center;        /* centers horizontally */
   text-align: center;         /* centers text inside elements */
   color: #edf8ff;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .content {
-  height: 100vh;              /* makes container full screen height */
-  transform: translateY(20px); /* moves content further down the viewport */
+  height: auto;
+  transform: none;
   display: flex;              /* enables flex layout */
   flex-direction: column;     /* stacks items vertically */
   justify-content: center;    /* centers vertically */
   align-items: center;        /* centers horizontally */
   text-align: center;         /* centers text inside elements */
   color: #edf8ff;
-  padding: 0 20px; 
+  padding-top: 20px; 
 }
 
 .navbar {
+  position: fixed;
   top: 0;                          /* anchors navbar to top of screen */
   left: 0;                         /* anchors navbar to left edge of screen */
   width: 100%;                     /* sets sidebar width */
   background: none;                /* no background color */
-  padding: 20px 10px;              /* inner spacing (top/bottom + left/right) */
+  padding: 10px 0px;              /* inner spacing (top/bottom + left/right) */
   display: flex;                   /* enables flexbox layout */
   gap: 10px;                       /* space between nav items */
   z-index: 1000;                   /* keeps navbar above background/content */
@@ -66,29 +77,27 @@ body {
 }
 
 .site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 0px;
+  margin-top: 10px;
 }
 
 .project-grid {
   display: grid;                          /* enables grid layout */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive columns */
   gap: 20px;                              /* space between cards */
-  padding: 20px;                          /* spacing around grid */
+  padding: 450px 0px 0px;                   /* spacing around grid */
   max-width: 1100px;                      /* keeps layout centered and clean */
-  margin: 400px auto 0;
+  margin: 0 auto;
 }
 
 .project-card {
   background: rgba(15, 31, 20, 0.7);
   border: 5px solid #2f5a3d;
-  border-radius: 6px;                  /* rounded corners */
-  padding: 20px;                       /* inner padding */
-  max-width: 350px;                    /* width of each card */
+  border-radius: 6px;                 /* rounded corners */
+  padding: 0px;                       /* inner padding */
+  max-width: 350px;                   /* width of each card */
   text-align: center;
 }
 
