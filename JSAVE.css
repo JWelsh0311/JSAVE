@@ -128,37 +128,43 @@ html, body {
 
 /* Responsiveness */
 @media (max-width: 768px) {
+
   .navbar {
     position: static;
-	gap: 18px;                 /* less space between links */
-    height: 55px;              /* slightly shorter navbar */
+    gap: 18px;
+    height: 55px;
   }
 
   .navbar a {
-    font-size: 15px;           /* smaller text */
+    font-size: 15px;
     padding: 8px 12px;
   }
 
   .navbar .pipe {
     font-size: 22px;
   }
-  
+
   .about-main {
-  padding-top: 150px;
-}
-  
-  .about-content {
-  padding-top: 200px;
+    padding-top: 150px;
+  }
+
+  .portfolio-main {
+    padding-top: 150px;
   }
 
   .hero h1 {
     font-size: 2rem;
   }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-   .navbar {
-	position: static;
+
+  .navbar {
+    position: static;
     gap: 10px;
     height: 50px;
   }
@@ -171,23 +177,22 @@ html, body {
   .navbar .pipe {
     font-size: 18px;
   }
-  
-   .hero h1 {
+
+  .hero h1 {
     font-size: 1.3rem;
     padding: 0 20px;
   }
-  
+
   .about-main {
-  padding-top: 150px;
-}
-  
-  .about-content {
-  padding-top: 200px;
+    padding-top: 100px;
+  }
+
+  .portfolio-main {
+    padding-top: 100px;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
-    padding: 200px 15px 20px;      /* top right/left bottom */
   }
-  
+
 }
