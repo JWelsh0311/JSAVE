@@ -1,11 +1,12 @@
 html, body {
-  height: 100%;
+ height: 100%; /* keep for desktop alignment */
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: url("background.png") repeat-y center top;
-  background-size: cover;
-  background-position: center top;
+  background: url("background.png") no-repeat center top;
+  background-size: cover; /* desktop: fills viewport nicely */
+  background-attachment: scroll; /* mobile-friendly */
+  background-color: #0f1f14; /* fallback color matching image bottom */
   color: #9fb0c1;
   font-family: Arial, sans-serif;
 }
@@ -129,6 +130,10 @@ html, body {
 
 /* Responsiveness */
 @media (max-width: 768px) {
+	
+html, body {
+    background-size: 100% auto; /* fills width, extends height */
+  }
 
   .navbar {
     position: static;
@@ -163,6 +168,10 @@ html, body {
 }
 
 @media (max-width: 480px) {
+	
+html, body {
+    background-size: 100% 100%; /* fills both width & height */
+  }
 
   .navbar {
     position: static;
