@@ -1,17 +1,13 @@
 html, body {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   background: url("background.png") no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center top;
   color: #edf8ff;
   font-family: Arial, sans-serif;
-}
-
-body {
-  flex: 1;
 }
 
 .hero {
@@ -26,21 +22,28 @@ body {
   box-sizing: border-box;
 }
 
-.about-content {
-  flex: 1;                        /* pushes footer to bottom */
-  display: flex;                  /* enables flexbox layout */
-  flex-direction: column;         /* stacks the paragraphs vertically */
-  justify-content: flex-start;    /* starts content from the top of the section */
-  align-items: center;            /* centers content horizontally */
-  text-align: center;             /* centers text inside the paragraphs */
-  padding-top: 400px;             /* creates space above content to position it lower on the page */
-  box-sizing: border-box;         /* includes padding in the total height calculation */
+.about-main {
+  flex: 1;                         /* pushes footer to bottom */
+  display: flex;                   /* enables flexbox layout */
+  flex-direction: column;           /* stacks content vertically */
+  align-items: center;              /* centers the content container */
+  padding-top: 250px;               /* moves content down */
+  box-sizing: border-box;           /* includes padding in height calculation */
+}
+
+.about-content { 
+  width: 100%;                      /* allows content to span the page */
+  display: flex;                    /* enables flexbox layout */
+  flex-direction: column;           /* stacks paragraphs vertically */
+  align-items: center;              /* centers paragraphs horizontally */
+  text-align: center;               /* centers text inside paragraphs */
 }
   
-.about-content h2 {
-  max-width: 1200px;              /* limits paragraph width so text does not stretch too far across the screen */
-  margin: 5px auto;              /* adds vertical spacing between paragraphs and centers the block */
-  line-height: 1.2;               /* increases line spacing to improve readability */
+.about-content h3 {
+  max-width: 1200px;                /* limits paragraph width */
+  width: 90%;                       /* gives text a responsive width */
+  margin: 5px auto;                 /* centers text blocks */
+  line-height: 1.2;                 /* improves readability */
 }
 
 .navbar {
@@ -83,19 +86,21 @@ body {
   width: 100%;
   text-align: center;
   padding: 0px;
+
 }
 
 .portfolio-main {
   flex: 1;                    /* pushes footer to bottom */
   display: flex;              /* enables flexbox */
   flex-direction: column;     /* stacks content vertically */
+  padding: 250px 0px 0px;     /* spacing around grid */
+  box-sizing: border-box;     /* keeps padding included in layout */
 }
 
 .project-grid {
   display: grid;                          /* enables grid layout */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive columns */
   gap: 20px;                              /* space between cards */
-  padding: 410px 0px 0px;                   /* spacing around grid */
   max-width: 1100px;                      /* keeps layout centered and clean */
   margin: 0 auto;
 }
@@ -138,6 +143,10 @@ body {
     font-size: 22px;
   }
   
+  .about-main {
+  padding-top: 150px;
+}
+  
   .about-content {
   padding-top: 200px;
   }
@@ -167,6 +176,10 @@ body {
     font-size: 1.3rem;
     padding: 0 20px;
   }
+  
+  .about-main {
+  padding-top: 150px;
+}
   
   .about-content {
   padding-top: 200px;
