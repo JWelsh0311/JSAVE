@@ -4,7 +4,7 @@ html, body {
   display: flex;
   flex-direction: column;
   background: url("background.png") no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center top;
   color: #edf8ff;
   font-family: Arial, sans-serif;
