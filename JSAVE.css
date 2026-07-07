@@ -6,7 +6,7 @@ html, body {
   background: url("background.png") repeat-y center top;
   background-size: cover;
   background-position: center top;
-  color: #edf8ff;
+  color: #9fb0c1;
   font-family: Arial, sans-serif;
 }
 
@@ -17,7 +17,7 @@ html, body {
   justify-content: center;    /* centers vertically */
   align-items: center;        /* centers horizontally */
   text-align: center;         /* centers text inside elements */
-  color: #edf8ff;
+  color: #8196aa;
   margin: 0;
   box-sizing: border-box;
 }
@@ -44,6 +44,7 @@ html, body {
   width: 90%;                       /* gives text a responsive width */
   margin: 5px auto;                 /* centers text blocks */
   line-height: 1.2;                 /* improves readability */
+  color: #8196aa;
 }
 
 .navbar {
@@ -59,7 +60,7 @@ html, body {
 }
 
 .navbar a {
-  color: #fff;            /* link text color */
+  color: #8196aa;           /* link text color */
   text-decoration: none;     /* removes underline from links */
   padding: 10px;             /* clickable area around link text */
   border-radius: 6px;        /* rounded corners for hover effect */
