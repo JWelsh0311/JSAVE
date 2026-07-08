@@ -138,11 +138,11 @@ html, body {
 	
    .logo-container {
     margin-top: -50px;
-    margin-bottom: -75px;
+    margin-bottom: -100px;
   }
 
-  .logo-container img {
-    width: 500px;
+   .logo-container img {
+    width: min(1000px, 90vw);
   }
 
   .navbar {
@@ -181,11 +181,7 @@ html, body {
 	
    .logo-container {
     margin-top: -25px;
-    margin-bottom: -50px;
-  }
-
-  .logo-container img {
-    width: 320px;
+    margin-bottom: -75px;
   }
 
   .navbar {
