@@ -89,10 +89,9 @@ html, body {
 }
 
 .site-footer {
-   width: 100%;
+  width: 100%;
   text-align: center;
-  padding: 10px 0;
-  flex-shrink: 0;
+  padding: 0px;
 }
 
 .portfolio-main {
