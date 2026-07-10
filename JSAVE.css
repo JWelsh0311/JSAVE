@@ -3,18 +3,17 @@ html, body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: url("background.png") no-repeat center top;
-  background-size: cover;
+  background: linear-gradient(180deg, #020409, #0c1726, #1a3047);
   color: #9fb0c1;
   font-family: Arial, sans-serif;
-  background-color: #070b09;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
-  margin-top: -150px;
+  margin-top: -200px;
   margin-bottom: -100px;
+  filter: drop-shadow(0 0 20px rgba(150, 200, 255, 0.25));
 }
 
 .logo-container img {
@@ -115,8 +114,8 @@ html, body {
 }
 
 .project-card {
-  background: rgba(15, 31, 20, 0.7);
-  border: 5px solid #2f5a3d;
+  background: rgba(10, 18, 30, 0.75);
+  border: 5px solid #29445c;
   border-radius: 6px;                 /* rounded corners */
   padding: 0px;                       /* inner padding */
   max-width: 350px;                   /* width of each card */
@@ -132,7 +131,7 @@ html, body {
 }
 
 .project-card a:hover {
-  background: #2f5a3d; /* hover highlight */
+  background: #29445c; /* hover highlight */
 }
 
 /* Responsiveness */
