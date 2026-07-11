@@ -153,7 +153,7 @@ html, body {
 .services-grid {
   display: grid;                          /* enables grid layout */
   grid-template-columns: repeat(3, 1fr);  /* responsive columns */
-  gap: 20px;                              /* space between cards */
+  gap: 10px;                              /* space between cards */
   max-width: 800px;                       /* keeps layout centered and clean */
   margin-bottom: 10px;
   margin-left: auto;
@@ -245,6 +245,11 @@ html, body {
 }
 
 @media (max-width: 480px) {
+	
+   #quote {
+    margin-top: 20px;
+    font-size: 1.3rem;
+  }
 	
    .logo-container {
     margin-top: -25px;
