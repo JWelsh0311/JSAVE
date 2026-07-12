@@ -45,12 +45,23 @@ html, body {
   text-align: center;
 }
   
-.about-content h3 {
+.about-content h2 {
   max-width: 1200px;                /* limits paragraph width */
   width: 90%;                       /* gives text a responsive width */
   margin: 5px auto;                 /* centers text blocks */
   line-height: 1.2;                 /* improves readability */
   color: #8196aa;
+}
+
+.certifications {
+  text-align: center;
+  margin-top: 25px;
+}
+
+  .cert-image {
+  width: 120px;
+  max-width: 25%;
+  margin: 10px;
 }
 
 .navbar {
