@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JSAVE Web Development</title>
+<title>Contact JSAVE Web Development</title>
 <meta charset="UTF-8">
     <meta name="description" content="Front-end web development focusing on HTML, CSS, and JavaScript supporting your professional online presence.">
     <meta name="keywords" content="web development, front-end developer, HTML, CSS, JavaScript, responsive web design, small business websites, portfolio website, custom website, website design, JSAVE Web Development">
@@ -12,7 +12,7 @@
     <meta property="og:description" content="Professional front-end web development using HTML, CSS, and JavaScript.">
     <meta property="og:image" content="https://jsaveweb.com/jsave-logo.png">
     <meta property="og:image:alt" content="JSAVE Web Development Logo">
-    <meta property="og:url" content="https://jsaveweb.com/about.html">
+    <meta property="og:url" content="https://jsaveweb.com/contact.html">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -22,6 +22,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="JSAVE.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<link rel="icon" type="image/png" href="jsave-logo.png">	
 </head>
 <body>
@@ -33,37 +34,89 @@
    <span class="pipe">|</span>
   <a href="services.html">Services</a>
    <span class="pipe">|</span>
-  <a href="about.html" class="active">About</a>
+  <a href="about.html">About</a>
    <span class="pipe">|</span>
-  <a href="contact.html">Contact</a>  
+  <a href="contact.html" class="active">Contact</a>  
 </nav>
 
 <main class="portfolio-main">
+
 <div class="logo-container">
   <img src="jsave-logo.png" alt="JSAVE Web Development Logo">
 </div>
 
-<section class="about-content">
-  <h2>JSAVE is a family inspired brand. Our goal is to help people craft a professional online presence by focusing on front-end development. With the aid of AI tools for debugging and ensuring correct web file syntax, we maximize attention on HTML, CSS, and JavaScript. We provide all project files to our customer so you can manage your online presence.</h2>
-    
-  <div class="certifications">
-    <h2 style="text-decoration:underline;">Technical Certifications</h2>
-      <a href="https://www.credly.com/badges/2e4907ef-450f-4b20-93a3-a6144b7d7f51/public_url" target="_blank">
-      <img src="security.png" alt="CompTIA Security+ Certification Badge" class="cert-image"></a>
+<section class="contact-content">
 
-      <a href="https://www.credly.com/badges/a5969c99-bc2a-41be-9f68-0e92838ef84d/public_url" target="_blank">
-      <img src="linux.png" alt="CompTIA Linux+ Certification Badge" class="cert-image"></a>
+<h1>Contact JSAVE Web Development</h1>
 
-      <a href="https://www.credly.com/badges/a11eea02-b1b4-4288-b4cf-6e5a4017f7bb/public_url" target="_blank">
-      <img src="google.png" alt="Google IT Support Professional Certificate Badge" class="cert-image"></a>
-  </div>
-  
+<form id="contact-form">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Business Name</label>
+<input type="text" name="business">
+
+<label>Project Type</label>
+<select name="project">
+  <option value="New Website">New Website</option>
+  <option value="Website Redesign">Website Redesign</option>
+  <option value="Website Maintenance">Website Maintenance</option>
+  <option value="Other">Other</option>
+</select>
+
+<label>Message</label>
+<textarea name="message" rows="6" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 </section>
 </main>
 
 <footer class="site-footer">
+<h2>Email:
+  <a href="mailto:JSAVEWebDev@outlook.com" style="color:#8196aa; text-decoration:underline;">JSAVEWebDev@outlook.com</a>
+  </h2>
   © 2026 JSAVE Web Development
 </footer>
+
+<script>
+
+emailjs.init({
+  publicKey: "Xqg7DStlJXiiFLuhk"
+});
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  emailjs.sendForm(
+    "service_q8fe6ks",
+    "template_vlle7sj",
+    this
+  )
+  .then(function() {
+
+    alert("Message sent successfully!");
+
+    document.getElementById("contact-form").reset();
+
+  }, function(error) {
+
+    alert("Message failed to send.");
+
+    console.log(error);
+
+  });
+
+});
+
+</script>
 
 </body>
 </html>
