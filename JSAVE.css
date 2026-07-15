@@ -253,6 +253,13 @@ html, body {
     border-radius: 5px;
 }
 
+#form-status {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #8196aa;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
 	

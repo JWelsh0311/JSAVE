@@ -71,6 +71,7 @@
 <label>Message</label>
 <textarea name="message" rows="6" required></textarea>
 
+<div id="form-status"></div>
 <button type="submit">Send Message</button>
 
 </form>
@@ -102,7 +103,8 @@ document.getElementById("contact-form")
   )
   .then(function() {
 
-    alert("Message sent successfully!");
+   document.getElementById("form-status").innerHTML =
+"Thank you for contacting JSAVE Web Development. Your message has been received and we will respond as soon as possible.";
 
     document.getElementById("contact-form").reset();
 
